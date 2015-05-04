@@ -18,27 +18,28 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int PersonName=0x7f08000e;
+        public static final int PersonName=0x7f08000f;
         public static final int ViewTripActivityButton=0x7f080001;
-        public static final int action_settings=0x7f080015;
-        public static final int addFriendButton=0x7f08000b;
-        public static final int createResetLayout=0x7f08000c;
+        public static final int action_settings=0x7f080016;
+        public static final int addFriendButton=0x7f08000c;
+        public static final int createResetLayout=0x7f08000d;
         public static final int createTripButton=0x7f080000;
-        public static final int currentLocation=0x7f08000a;
-        public static final int dateTime=0x7f080005;
-        public static final int friendsListView=0x7f080014;
+        public static final int currentLocation=0x7f08000b;
+        public static final int dateTime=0x7f080006;
+        public static final int friendsListView=0x7f080015;
         public static final int listView=0x7f080002;
-        public static final int locationName=0x7f080004;
-        public static final int personLocation=0x7f080010;
-        public static final int personName=0x7f080008;
-        public static final int personPhone=0x7f08000f;
-        public static final int phone=0x7f080009;
-        public static final int resetTrip=0x7f08000d;
-        public static final int timePicker=0x7f080006;
-        public static final int tripDate=0x7f080007;
-        public static final int tripDateView=0x7f080012;
-        public static final int tripLocName=0x7f080011;
-        public static final int tripTimeView=0x7f080013;
+        public static final int locationLayout=0x7f080004;
+        public static final int locationName=0x7f080005;
+        public static final int personLocation=0x7f080011;
+        public static final int personName=0x7f080009;
+        public static final int personPhone=0x7f080010;
+        public static final int phone=0x7f08000a;
+        public static final int resetTrip=0x7f08000e;
+        public static final int timePicker=0x7f080007;
+        public static final int tripDate=0x7f080008;
+        public static final int tripDateView=0x7f080013;
+        public static final int tripLocName=0x7f080012;
+        public static final int tripTimeView=0x7f080014;
         public static final int tripTitle=0x7f080003;
     }
     public static final class layout {

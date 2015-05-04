@@ -7,19 +7,36 @@
         android:layout_height="wrap_content"
         android:id="@+id/tripTitle"
         android:layout_alignParentStart="true"
-        android:hint="Enter the Location"/>
-    <EditText
+        android:hint="Enter Trip Title"/>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/locationName"
+        android:orientation="horizontal"
         android:layout_below="@id/tripTitle"
-        android:hint="Enter the Location"/>
+        android:id="@+id/locationLayout"
+        >
+
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/locationName"
+           android:layout_weight="2"
+            android:hint="Enter the Location"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SearchLoc"
+            android:onClick="SearchLocation"/>
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:id="@+id/dateTime"
-        android:layout_below="@id/locationName">
+        android:layout_below="@id/locationLayout">
         <TimePicker
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
