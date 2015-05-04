@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class CreateTripActivity extends Activity {
 
     private static final String TAG = "CreateTripActivity";
-    private EditText mLocation;
+    private EditText mTripTitle;
     private ArrayList<Person> mFriends;
     private EditText mPhone;
     private EditText mPersonName;
@@ -42,7 +42,7 @@ public class CreateTripActivity extends Activity {
 
         mFriends = new ArrayList<Person>();
 
-        mLocation = (EditText) findViewById(R.id.locationName);
+        mTripTitle = (EditText) findViewById(R.id.tripTitle);
         mDatePicker = (DatePicker) findViewById(R.id.tripDate);
         mTimePicker = (TimePicker) findViewById(R.id.timePicker);
         mCurrentLocation = (EditText) findViewById(R.id.currentLocation);
@@ -97,7 +97,7 @@ public class CreateTripActivity extends Activity {
 
         mTime = mTimePicker.getCurrentHour() + ":" + mTimePicker.getCurrentMinute();
         mDate = mDatePicker.getDayOfMonth() + ":" + mDatePicker.getMonth() + ":" + mDatePicker.getYear();
-        String location = mLocation.getText().toString();
+        String location = mTripTitle.getText().toString();
         Trip trip = new Trip(location, mDate, mTime, mFriends);
         Log.v(TAG, trip.getTripTitle());
         trip.addPeople(mFriends.toArray(new Person[mFriends.size()]));
@@ -150,7 +150,7 @@ public class CreateTripActivity extends Activity {
         mPhone.setText("");
         mFriends.clear();
         mCurrentLocation.setText("");
-        mLocation.setText("");
+        mTripTitle.setText("");
         Toast t=Toast.makeText(this,"All Details of this trip have been discarded",Toast.LENGTH_LONG);
         t.show();
     }

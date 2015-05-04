@@ -11,10 +11,11 @@ public class Trip implements Parcelable {
 	
 	// Member fields should exist here, what else do you need for a trip?
 	// Please add additional fields
-    private String mLocation;
+    private String mTripTitle;
     private Person[] mFriends;
     private String mDate;
     private String mTime;
+    private String mLocation;
 
 	/**
 	 * Parcelable creator. Do not modify this function.
@@ -39,7 +40,8 @@ public class Trip implements Parcelable {
 	public Trip(Parcel p) {
 		
 		// TODO - fill in here
-        mLocation = p.readString();
+        mTripTitle=p.readString();
+//        mTripTitle = p.readString();
         mDate = p.readString();
         mTime = p.readString();
         int noOfFriends = p.readInt();
@@ -49,21 +51,16 @@ public class Trip implements Parcelable {
 	}
 
 
-    /**
-	 * Create a Trip model object from arguments
-	 * 
-	 * @param name  Add arbitrary number of arguments to
-	 * instantiate Trip class based on member variables.
-	 */
-	public Trip(String locationName,  String date,String time, ArrayList<Person> friends) {
-		mLocation=locationName;
+
+	public Trip(String tripTitle,  String date,String time, ArrayList<Person> friends) {
+		mTripTitle=tripTitle;
         mDate=date;
         mTime=time;
         mFriends = new Person[1];
 		// TODO - fill in here, please note you must have more arguments here
 	}
     public final String getTripTitle(){
-        return mLocation;
+        return mTripTitle;
     }
 	/**
 	 * Serialize Trip object by using writeToParcel. 
@@ -80,7 +77,7 @@ public class Trip implements Parcelable {
 	 */
 	@Override
 	public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(mLocation);
+        dest.writeString(mTripTitle);
         dest.writeString(mDate);
         dest.writeString(mTime);
         dest.writeInt(mFriends.length);
@@ -101,7 +98,7 @@ public class Trip implements Parcelable {
 		return 0;
 	}
     public final String getLocation(){
-        return mLocation;
+        return mTripTitle;
     }
     public final String getTime(){
         return mTime;
